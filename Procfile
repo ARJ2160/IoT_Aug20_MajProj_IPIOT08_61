@@ -1,1 +1,1 @@
-worker python arj-app.py
+web python arj-app.py
