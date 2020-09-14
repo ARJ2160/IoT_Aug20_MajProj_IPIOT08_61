@@ -28,8 +28,8 @@ def start(bot,update):
   bot.send_message(chat_id,text = start_message)
   
 while True:
-  Adafruit_IO_Name = os.getenv('Adafruit-IO-Name')
-  Adafruit_IO_Key = os.getenv('Adafruit-IO-Key')
+  Adafruit_IO_Name = os.getenv('Adafruit_IO_Name')
+  Adafruit_IO_Key = os.getenv('Adafruit_IO_key')
   TOKEN = os.getenv('TOKEN')
   aio = Client( Adafruit_IO_Name,Adafruit_IO_Key)
   u = Updater(token ='TOKEN')#Updater is a library from telegram package( Authenticates the key)
