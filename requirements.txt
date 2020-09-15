@@ -1,2 +1,3 @@
 requests
-telegram.ext
+python-telegrm-bot
+adafruit_IO
