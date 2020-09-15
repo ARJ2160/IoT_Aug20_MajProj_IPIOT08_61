@@ -32,7 +32,7 @@ while True:
   Adafruit_IO_Key = os.getenv('Adafruit_IO_key')
   TOKEN = os.getenv('TOKEN')
   aio = Client( Adafruit_IO_Name,Adafruit_IO_Key)
-  u = Updater(token ='TOKEN')#Updater is a library from telegram package( Authenticates the key)
+  u = Updater(TOKEN)#Updater is a library from telegram package( Authenticates the key)
   dp = u.dispatcher
   dp.add_handler(CommandHandler('ON',ON))
   dp.add_handler(CommandHandler('OFF',OFF))
