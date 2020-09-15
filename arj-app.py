@@ -30,7 +30,7 @@ def feed_value(value):
 #Command to be executed when Bot starts
 def start(bot,update):
   chat_id = update.message.chat_id
-  start_message = "/ON TO TURN ON LIGHT    /OFF TO TURN OFF LIGHT"
+  start_message = "/ON TO TURN ON LIGHT and /OFF TO TURN OFF LIGHT"
   bot.send_message(chat_id,text = start_message)
   
 u = Updater(TOKEN)#Updater is a library from telegram package( Authenticates the key)
