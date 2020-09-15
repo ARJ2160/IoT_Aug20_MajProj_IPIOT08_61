@@ -20,8 +20,8 @@ def OFF(bot,update):
 def feed_value(value):
   feed = aio.feeds('light-control')
   aio.send_data(feed.key,value) #Sends data to specific feed
+  
 #Command to be executed when Bot starts
-
 def start(bot,update):
   chat_id = update.message.chat_id
   start_message = "/ON TO TURN ON LIGHT    /OFF TO TURN OFF LIGHT"
