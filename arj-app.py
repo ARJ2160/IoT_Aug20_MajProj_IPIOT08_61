@@ -5,7 +5,6 @@ import os
                               #Section 1 - Sending Value
 #Commands for Turning ON 
 def ON(bot,update):
-  value =  Data(value = 1)
   chat_id = update.message.chat_id                             
   bot.send_message(chat_id,text = "ON")
   bot.send_photo(chat_id,photo = 'https://www.securityroundtable.org/wp-content/uploads/2019/03/AdobeStock_261504199-300x169.jpeg')
@@ -13,15 +12,14 @@ def ON(bot,update):
 
 #Commands for Turning OFF
 def OFF(bot,update):
-  value =  Data(value = 0)
   chat_id = update.message.chat_id                             
   bot.send_message(chat_id,text = "OFF")
   bot.send_photo(chat_id,photo = 'https://motionarray.imgix.net/preview-366781-SucOpqoSyhMdoEq8-large.jpg?w=1400&q=60&fit=max&auto=format')
   feed_value(0)
 
 def feed_value(value):
-  feeds = aio.feeds('light-control')
-  value_send = aio.send_data(feeds,value) #Sends data to specific feed
+  feed = aio.feeds('light-control')
+  aio.send_data(feed.key,value) #Sends data to specific feed
 #Command to be executed when Bot starts
 
 def start(bot,update):
