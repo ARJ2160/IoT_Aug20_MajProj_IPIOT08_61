@@ -29,15 +29,15 @@ def start(bot,update):
   start_message = "/ON TO TURN ON LIGHT    /OFF TO TURN OFF LIGHT"
   bot.send_message(chat_id,text = start_message)
   
-while True:
-  Adafruit_IO_Name = os.getenv('Adafruit_IO_Name')
-  Adafruit_IO_Key = os.getenv('Adafruit_IO_key')
-  TOKEN = os.getenv('TOKEN')
-  aio = Client( Adafruit_IO_Name,Adafruit_IO_Key)
-  u = Updater(TOKEN)#Updater is a library from telegram package( Authenticates the key)
-  dp = u.dispatcher
-  dp.add_handler(CommandHandler('ON',ON))
-  dp.add_handler(CommandHandler('OFF',OFF))
-  dp.add_handler(CommandHandler('start',start))
-  u.start_polling()
-  u.idle()
+Adafruit_IO_Name = os.getenv('Adafruit_IO_Name')
+Adafruit_IO_Key = os.getenv('Adafruit_IO_key')
+TOKEN = os.getenv('TOKEN')
+aio = Client( Adafruit_IO_Name,Adafruit_IO_Key)
+print("Client Created")
+u = Updater(TOKEN)#Updater is a library from telegram package( Authenticates the key)
+p = u.dispatcher
+dp.add_handler(CommandHandler('ON',ON))
+dp.add_handler(CommandHandler('OFF',OFF))
+dp.add_handler(CommandHandler('start',start))
+u.start_polling()
+u.idle()
