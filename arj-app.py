@@ -35,7 +35,7 @@ TOKEN = os.getenv('TOKEN')
 aio = Client( Adafruit_IO_Name,Adafruit_IO_Key)
 print("Client Created")
 u = Updater(TOKEN)#Updater is a library from telegram package( Authenticates the key)
-p = u.dispatcher
+dp = u.dispatcher
 dp.add_handler(CommandHandler('ON',ON))
 dp.add_handler(CommandHandler('OFF',OFF))
 dp.add_handler(CommandHandler('start',start))
