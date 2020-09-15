@@ -3,7 +3,7 @@ from Adafruit_IO import Data, Client, Feed
 import os
 
 Adafruit_IO_Name = os.getenv('Adafruit_IO_Name')
-Adafruit_IO_Key = os.getenv('Adafruit_IO_key')
+Adafruit_IO_Key = os.getenv('Adafruit_IO_Key')
 TOKEN = os.getenv('TOKEN')#Telegram BOT Token
 aio = Client( Adafruit_IO_Name,Adafruit_IO_Key)
 print("Client Created")
