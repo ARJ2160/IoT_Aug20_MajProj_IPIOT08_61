@@ -25,7 +25,7 @@ def OFF(bot,update):
 
 def feed_value(value):
   feeds = aio.feeds('light-control')
-  aio.send_data(feeds, value)
+  aio.send_data(feeds.key, value)
   
 #Command to be executed when Bot starts
 def start(bot,update):
